@@ -4,6 +4,22 @@
 
 **在线体验：[47-degree-music-room.pages.dev](https://47-degree-music-room.pages.dev/)**
 
+## 作品展示
+
+从演示视频中截取的实际界面。
+
+### 把收藏摆成一面唱片架
+
+![金黄色背景下的 3D 唱片架与 Chinese Football 专辑](docs/images/record-shelf.jpg)
+
+### 每张唱片，都有自己的颜色
+
+![蓝色背景下的 Slash 专辑与立体唱片陈列](docs/images/album-browsing.jpg)
+
+### 打开封面，展开音乐的内页
+
+![Chinese Football 专辑展开后的纸质手册、曲目介绍与播放列表](docs/images/album-booklet.jpg)
+
 ## 功能
 
 - 3D 唱片架，支持拖动、滚轮和左右切换。
