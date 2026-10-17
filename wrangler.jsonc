@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "47-degree-music-room",
+  "pages_build_output_dir": "./dist",
+  "compatibility_date": "2025-04-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "47-degree-music-room-db",
+      "database_id": "96d1e97f-0f5a-4156-81da-0d6d839e6632"
+    }
+  ]
+}

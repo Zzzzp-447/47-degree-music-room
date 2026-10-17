@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.wrangler/
+.wrangler-function-build/
+.env*
+.dev.vars*
+*.log
+output/
+*.sqlite*
+*.db*
+.DS_Store
+Thumbs.db

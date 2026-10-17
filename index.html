@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#b7c7c2" />
+  <meta name="description" content="一间由你的网易云专辑生成的 3D 数字唱片室" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='31' fill='%23131512'/%3E%3Ccircle cx='32' cy='32' r='7' fill='%23eeeae0'/%3E%3C/svg%3E" />
+  <title>47° · 我的唱片室</title>
+</head>
+<body>
+  <section class="auth-screen" aria-label="登录唱片室">
+    <div class="auth-card">
+      <p class="auth-kicker">47° / PRIVATE LISTENING ROOM</p>
+      <h1>你的唱片，<br>只属于你。</h1>
+      <p class="auth-intro">登录后从一张空唱片架开始，粘贴网易云专辑链接，建立自己的收藏。</p>
+      <form class="auth-form">
+        <label>电子邮箱<input class="auth-email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+        <label>密码<input class="auth-password" type="password" autocomplete="current-password" minlength="6" required placeholder="至少 6 位"></label>
+        <button class="auth-submit" type="submit">登录唱片室 <span>→</span></button>
+      </form>
+      <div class="auth-actions"><button class="auth-switch" type="button">没有账号？注册</button><button class="auth-forgot" type="button">忘记密码</button></div>
+      <p class="auth-status" role="status">正在连接唱片室…</p>
+    </div>
+  </section>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="boot" aria-hidden="true"><b>47°</b><i></i><span>BUILDING YOUR LISTENING ROOM</span></div>
+  <header class="topbar" inert>
+    <button class="logo" type="button" aria-label="返回唱片架">47<sup>°</sup></button>
+    <div class="mode"><button class="mode-albums active" type="button" aria-pressed="true">ALBUMS</button><button class="mode-playlists" type="button" aria-pressed="false">HISTORY</button></div>
+    <div class="topbar-actions"><button class="account-logout" type="button" title="退出登录">退出登录</button><button class="import-open" type="button"><span>导入网易云专辑</span><i>＋</i></button></div>
+  </header>
+
+  <main inert>
+    <section class="library" aria-label="3D 专辑架">
+      <div class="library-copy">
+        <p>MY PRESSINGS / <span class="album-total">01</span></p>
+        <h1 class="album-title">等待<br>你的唱片</h1>
+        <span class="album-artist">PASTE A NETEASE ALBUM LINK</span>
+      </div>
+      <div class="album-search">
+        <label for="album-search-input">SEARCH / ALBUM OR ARTIST</label>
+        <div><input id="album-search-input" type="search" autocomplete="off" placeholder="输入专辑名或歌手名" aria-controls="album-search-results" aria-expanded="false" /><button class="album-search-clear" type="button" aria-label="清空搜索">×</button></div>
+        <ol class="album-search-results" id="album-search-results"></ol>
+      </div>
+      <div class="scene-wrap">
+        <canvas class="webgl"></canvas>
+        <button class="album-hit" type="button" aria-label="展开当前专辑"><span>OPEN<br>RECORD</span></button>
+      </div>
+      <div class="library-controls">
+        <button class="previous" type="button" aria-label="上一张专辑">←</button>
+        <span class="album-index">01 / 01</span>
+        <i></i>
+        <button class="next" type="button" aria-label="下一张专辑">→</button>
+      </div>
+      <p class="gesture-hint">DRAG / SCROLL TO BROWSE · CLICK TO UNFOLD · TRIPLE CLICK TO MANAGE</p>
+    </section>
+
+    <section class="playlists-view" aria-hidden="true" aria-label="历史播放记录">
+      <header class="playlists-heading"><div><p>LISTENING ARCHIVE / <span class="playlist-count">00</span> TRACKS</p><h1>播放记录<br><i>LISTENING HISTORY</i></h1></div><p class="playlist-runtime">LOCAL HISTORY</p></header>
+      <div class="playlist-columns" aria-hidden="true"><span>NO. / RECORD</span><span>TRACK / ARTIST</span><span>PLAYED</span></div>
+      <ol class="playlist-list"></ol>
+    </section>
+
+    <section class="detail" aria-hidden="true">
+      <button class="detail-back" type="button">← <span>BACK TO SHELF</span></button>
+      <div class="detail-copy"><p>NOW OPEN / <span class="detail-year">—</span></p><h2 class="detail-title">—</h2><span class="detail-artist">—</span></div>
+      <div class="sleeve-fold" tabindex="0" aria-label="三联折页手册，可左右拖动展开或收拢">
+        <article class="panel panel-notes" tabindex="0" aria-label="曲目背景，可使用鼠标滚轮阅读完整内容">
+          <header><span class="note-kicker">TRACK NOTES / 01</span><span class="note-page">01 / 01</span></header>
+          <div class="note-body"><b class="note-title">—</b><p class="note-context">—</p></div>
+          <footer><small class="catalogue">CAT. 47—001</small><nav class="note-nav" aria-label="曲目说明分页"><button class="note-prev" type="button" aria-label="上一页">←</button><span class="note-sheet">01 / 01</span><button class="note-next" type="button" aria-label="下一页">→</button></nav></footer>
+        </article>
+        <div class="fold-leaf fold-leaf-primary">
+          <article class="panel panel-tracks"><header><span>TRACKLIST / I</span><span>TIME</span></header><ol class="track-list track-list-primary"></ol></article>
+          <div class="fold-leaf fold-leaf-secondary">
+            <article class="panel panel-tracks panel-tracks-more"><header><span>TRACKLIST / II</span><span>TIME</span></header><ol class="track-list track-list-secondary"></ol></article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="player" aria-label="音乐播放器" inert>
+    <button class="mini-cover" type="button" aria-label="打开当前专辑"></button>
+    <div class="player-copy"><strong>选择一张唱片</strong><small>47° PRIVATE LISTENING ROOM</small></div>
+    <button class="prev-track" type="button" aria-label="上一首">←</button>
+    <button class="play" type="button" aria-label="播放"><span>▶</span></button>
+    <button class="next-track" type="button" aria-label="下一首">→</button>
+    <div class="progress"><span class="elapsed">0:00</span><button type="button" aria-label="调整进度"><i></i></button><span class="duration">0:00</span></div>
+    <audio preload="none"></audio>
+  </aside>
+
+  <dialog class="import-dialog">
+    <button class="dialog-close" type="button" aria-label="关闭">×</button>
+    <p>ADD A RECORD / NETEASE CLOUD MUSIC</p>
+    <h2>把你的专辑<br>放进唱片室</h2>
+    <form>
+      <label for="album-link">专辑链接或数字 ID</label>
+      <div><input id="album-link" autocomplete="off" placeholder="https://music.163.com/#/album?id=32311" required /><button type="submit">解析并导入 <span>→</span></button></div>
+      <small class="import-status">打开网易云专辑页，复制分享链接后粘贴到这里。</small>
+    </form>
+    <div class="dialog-record" aria-hidden="true"><i></i></div>
+  </dialog>
+  <dialog class="manage-dialog">
+    <button class="manage-close" type="button" aria-label="关闭">×</button>
+    <p>RECORD MANAGEMENT / PRIVATE ARCHIVE</p>
+    <div class="manage-heading"><div class="manage-cover" aria-hidden="true"></div><div><small>TRIPLE-CLICK EDITION</small><h2>管理这张唱片</h2></div></div>
+    <form>
+      <div class="manage-fields">
+        <label>专辑名称<input class="manage-name" required /></label>
+        <label>艺术家<input class="manage-artist" required /></label>
+        <label>发行年份<input class="manage-year" inputmode="numeric" /></label>
+        <label class="manage-description-field">背景说明<textarea class="manage-description" rows="4"></textarea></label>
+      </div>
+      <small class="manage-status">修改会保存在你的个人唱片室中。</small>
+      <div class="manage-actions"><button class="manage-delete" type="button">删除唱片</button><button class="manage-save" type="submit">保存修改 <span>→</span></button></div>
+    </form>
+  </dialog>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
